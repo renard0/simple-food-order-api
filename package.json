@@ -16,7 +16,7 @@
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "entity:create": "typeorm entity:create -n",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "fixture": "fixtures ./fixtures --config ormconfig.json --sync",
+    "fixture": "fixtures ./fixtures --config ormconfig.js --sync",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",

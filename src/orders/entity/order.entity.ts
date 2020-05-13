@@ -67,7 +67,6 @@ export class Order {
 
   @Expose()
   get totalPrice(): number {
-    console.log(this.products);
     const products = this.products.map(p => ({
       price: p.product.price,
       quantity: p.quantity,
