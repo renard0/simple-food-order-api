@@ -1,0 +1,8 @@
+entity: Product
+items:
+  product{1..50}:
+    code: '{{random.uuid}}'
+    name: '{{commerce.productName}}'
+    price: '{{commerce.price}}'
+    phone: '{{phone.phoneNumberFormat}}'
+    restaurant: '@restaurant{1..5}'

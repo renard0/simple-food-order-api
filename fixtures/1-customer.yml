@@ -1,0 +1,7 @@
+entity: Customer
+items:
+  customer{1..5}:
+    firstName: '{{name.firstName}}'
+    lastName: '{{name.lastName}}'
+    address: '{{address.streetAddress}}'
+    phone: '{{phone.phoneNumberFormat}}'

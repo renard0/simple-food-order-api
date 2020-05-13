@@ -1,0 +1,920 @@
+{
+	"info": {
+		"_postman_id": "0b1c40c7-8602-4769-bb0f-3d3cedd7a7d9",
+		"name": "FoodOrder",
+		"description": "Simple Food Orderinf API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Create customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Miles\",\n    \"lastName\": \"Davis\",\n    \"phone\": \"+380936505050\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get customer by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customers/82056ae7-c5ea-48c4-a392-f5aefd623700",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"82056ae7-c5ea-48c4-a392-f5aefd623700"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customers/985aa45d-904d-41f7-b775-ffe7e9f5b9df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"985aa45d-904d-41f7-b775-ffe7e9f5b9df"
+							]
+						},
+						"description": "Delete customer by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Miles\",\n    \"lastName\": \"Davis\",\n    \"address\": \"Alton, Illinois, U.S.\",\n    \"phone\": \"+380938885055\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customers/985aa45d-904d-41f7-b775-ffe7e9f5b9df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"985aa45d-904d-41f7-b775-ffe7e9f5b9df"
+							]
+						},
+						"description": "Update customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Get customer orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customers/1ae6b968-f1ec-4c9b-9592-d5cb7eda4c66/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"1ae6b968-f1ec-4c9b-9592-d5cb7eda4c66",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products/9f51decd-7987-48e6-8a02-6e29faaaf323",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"9f51decd-7987-48e6-8a02-6e29faaaf323"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"code\": \"5be0b6ba-8ed4-4d88-acbe-f8dd78a0c2b3\",\n\t\"restaurantId\": \"25660fbf-1ca8-46ab-98f4-45b272d5efb3\",\n\t\"name\": \"Intelligent Cotton Shirt\",\n\t\"price\": \"708.00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/5be0b6ba-8ed4-4d88-acbe-f8dd78a0c2b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"5be0b6ba-8ed4-4d88-acbe-f8dd78a0c2b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"code\": \"HHf46g677sfdsf342342\",\n\t\"restaurantId\": \"25660fbf-1ca8-46ab-98f4-45b272d5efb3\",\n\t\"name\": \"Hot dog\",\n\t\"price\": \"15.00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/products/5be0b6ba-8ed4-4d88-acbe-f8dd78a0c2b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"5be0b6ba-8ed4-4d88-acbe-f8dd78a0c2b3"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						},
+						"description": "Mark record as deleted"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Carriers",
+			"item": [
+				{
+					"name": "Average delivery time",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/carriers/f1963851-b4d8-4673-ab64-bbbc7b128c83/stats/averageDeliveryTime",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carriers",
+								"f1963851-b4d8-4673-ab64-bbbc7b128c83",
+								"stats",
+								"averageDeliveryTime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total orders price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carriers/f1963851-b4d8-4673-ab64-bbbc7b128c83/stats/totalOrdersPrice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carriers",
+								"f1963851-b4d8-4673-ab64-bbbc7b128c83",
+								"stats",
+								"totalOrdersPrice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total delivered orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carriers/f1963851-b4d8-4673-ab64-bbbc7b128c83/stats/totalOrders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carriers",
+								"f1963851-b4d8-4673-ab64-bbbc7b128c83",
+								"stats",
+								"totalOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get most popular address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carriers/f1963851-b4d8-4673-ab64-bbbc7b128c83/stats/mostPopularAddress",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carriers",
+								"f1963851-b4d8-4673-ab64-bbbc7b128c83",
+								"stats",
+								"mostPopularAddress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create carrier",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"phone\": \"3457890000\",\n\t\"firstName\": \"John\",\n\t\"lastName\": \"Smith\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/carriers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carriers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete carrier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carriers/f1c7802e-3e9d-425c-a6c7-f08fb7169bbc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carriers",
+								"f1c7802e-3e9d-425c-a6c7-f08fb7169bbc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carriers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carriers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get carrier orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carriers/f1963851-b4d8-4673-ab64-bbbc7b128c83/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carriers",
+								"f1963851-b4d8-4673-ab64-bbbc7b128c83",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update carrier",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"phone\": \"086-208-0734\",\n\t\"firstName\": \"Moses\",\n\t\"lastName\": \"Mante\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/carriers/b6d7bd3f-9c3a-45df-80da-972669a0aa54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carriers",
+								"b6d7bd3f-9c3a-45df-80da-972669a0aa54"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/restaurants/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get restaurant by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fc0a6570-c18f-4bce-9760-067ebfe1b1ec",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/restaurants/6e0bd007-cbee-4b30-b4ac-32825d31de1e/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurants",
+								"6e0bd007-cbee-4b30-b4ac-32825d31de1e",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get restaurant products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/restaurants/6e0bd007-cbee-4b30-b4ac-32825d31de1e/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurants",
+								"6e0bd007-cbee-4b30-b4ac-32825d31de1e",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get restaurant orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/restaurants/3683dab3-996f-48ff-bb76-1883c33010e0/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurants",
+								"3683dab3-996f-48ff-bb76-1883c33010e0",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create restaurant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"New restaurant\",\n  \"address\": \"Milwaukee, 1002  Whaley Lane\",\n  \"phone\": \"414-469-5873\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/restaurants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete restaurant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/restaurants/fadfb13a-6838-45ba-9c66-0f1b147af0c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurants",
+								"fadfb13a-6838-45ba-9c66-0f1b147af0c8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update restaurant",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Milwaukee cavs\",\n  \"address\": \"Milwaukee, 1002  Whaley Lane\",\n  \"phone\": \"414-469-5873\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/restaurants/fadfb13a-6838-45ba-9c66-0f1b147af0c8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurants",
+								"fadfb13a-6838-45ba-9c66-0f1b147af0c8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/orders/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"restaurantId\": \"3683dab3-996f-48ff-bb76-1883c33010e0\",\n\t\"customerId\": \"1ae6b968-f1ec-4c9b-9592-d5cb7eda4c66\",\n\t\"products\": [\n\t\t{\n\t\t\t\"code\": \"0806035f-090d-4260-93a0-fa624c97beec\", \n\t\t\t\"quantity\": 1\n\t\t},\n\t\t{\n\t\t\t\"code\": \"0d574fbb-b934-4c26-9da3-1e8bf825bffc\", \n\t\t\t\"quantity\": 3\n\t\t}\n\t],\n\t\"address\": \"1477  Ferrell Street\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								""
+							]
+						},
+						"description": "Create order"
+					},
+					"response": []
+				},
+				{
+					"name": "Get order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/58b885ae-9abd-4dd7-989a-3ec149fd1d10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"58b885ae-9abd-4dd7-989a-3ec149fd1d10"
+							]
+						},
+						"description": "Get order by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Accept order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/orders/58b885ae-9abd-4dd7-989a-3ec149fd1d10/accept",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"58b885ae-9abd-4dd7-989a-3ec149fd1d10",
+								"accept"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign carrier",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"carrierId\": \"f1963851-b4d8-4673-ab64-bbbc7b128c83\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/58b885ae-9abd-4dd7-989a-3ec149fd1d10/carrier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"58b885ae-9abd-4dd7-989a-3ec149fd1d10",
+								"carrier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pick up order",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/orders/58b885ae-9abd-4dd7-989a-3ec149fd1d10/pickUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"58b885ae-9abd-4dd7-989a-3ec149fd1d10",
+								"pickUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deliver order",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/orders/58b885ae-9abd-4dd7-989a-3ec149fd1d10/deliver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"58b885ae-9abd-4dd7-989a-3ec149fd1d10",
+								"deliver"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c2c41bff-18c0-4c70-a745-1994e1d03b57",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "dbc4e13f-690f-441f-b6e1-af1b004c4171",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "312f5f35-b3cc-4fe2-9f14-fc1ee67b65c8",
+			"key": "customer_id",
+			"value": "82056ae7-c5ea-48c4-a392-f5aefd623700",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

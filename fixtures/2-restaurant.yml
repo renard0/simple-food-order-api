@@ -1,0 +1,6 @@
+entity: Restaurant
+items:
+  restaurant{1..5}:
+    name: '{{company.companyName}}'
+    address: '{{address.streetAddress}}'
+    phone: '{{phone.phoneNumberFormat}}'

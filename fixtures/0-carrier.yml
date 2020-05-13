@@ -1,0 +1,11 @@
+entity: Carrier
+items:
+  carrier0:
+    firstName: '{{name.firstName}}'
+    lastName: '{{name.lastName}}'
+    phone: '{{phone.phoneNumberFormat}}'
+
+  carrier1:
+    firstName: '{{name.firstName}}'
+    lastName: '{{name.lastName}}'
+    phone: '{{phone.phoneNumberFormat}}'
